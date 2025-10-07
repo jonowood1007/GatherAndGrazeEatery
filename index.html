@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gather & Graze Eatery | Waitoki Café</title>
+  <meta name="description" content="A vibrant local café in Waitoki, Auckland. Coffee, brunch, cabinet food, and catering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <!-- Splash overlay -->
+  <div id="splash" aria-label="Loading">
+    <img src="assets/LargeLogo.jpg" alt="Gather & Graze Eatery">
+  </div>
+  
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img src="/assets/logo.png" alt="Gather & Graze Eatery" height="40" />
+      <span>Gather & Graze Eatery</span>
+    </a>
+    <nav class="nav">
+      <a href="/menu.html">Menu</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-img" src="/assets/hero.jpg" alt="Coffee and brunch at Gather & Graze Eatery" />
+      <div class="hero-text">
+        <h1>Waitoki’s local café</h1>
+        <p>Locally owned. Seasonal bites, great coffee, and relaxed vibes.</p>
+        <div class="cta">
+          <a class="btn" href="/menu.html">View menu</a>
+          <a class="btn ghost" href="/services.html">Catering & functions</a>
+        </div>
+        <ul class="badges">
+          <li>Open 7 days</li>
+          <li>Gluten-free options</li>
+          <li>Vegan friendly</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="hours-locate">
+      <div>
+        <h2>Hours</h2>
+        <p><strong>Mon–Fri</strong> 7:00–15:00<br>
+           <strong>Sat–Sun</strong> 8:00–15:00</p>
+      </div>
+      <div>
+        <h2>Find us</h2>
+        <p>Waitoki, Auckland, New Zealand</p>
+        <p><a href="https://maps.google.com/?q=Waitoki%2C%20Auckland" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p><a href="tel:+64000000000">+64 00 000 0000</a><br>
+           <a href="mailto:hello@gatherandgraze.nz">hello@gatherandgraze.nz</a></p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <article class="card">
+        <h3>Cabinet favourites</h3>
+        <p>Fresh pastries, slices, and savoury bakes every morning.</p>
+      </article>
+      <article class="card">
+        <h3>Brunch classics</h3>
+        <p>Eggs your way, bowls, and seasonal specials.</p>
+      </article>
+      <article class="card">
+        <h3>Locally roasted coffee</h3>
+        <p>Espresso, batch brew, and house-made syrups.</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    // Hide splash when all assets finish loading
+    //window.addEventListener('load', function () {
+    //  const el = document.getElementById('splash');
+    //  if (!el) return;
+    //  el.classList.add('hide');
+    //  setTimeout(() => el.remove(), 700);
+    //});
+
+    // Fallback auto-hide after 1.5s
+    setTimeout(() => {
+      const el = document.getElementById('splash');
+      if (el && !el.classList.contains('hide')) {
+        el.classList.add('hide');
+        setTimeout(() => el.remove(), 1300);
+      }
+    }, 1500);
+  </script>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Gather & Graze Eatery • Waitoki, Auckland</small>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
