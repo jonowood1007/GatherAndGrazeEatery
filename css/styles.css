@@ -81,6 +81,10 @@ a:hover{text-decoration:underline}
   padding: 10px 10px 10px 10px
 }
 
+.hours-locate{max-width:1100px;margin:24px auto;padding:0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.hours-locate h2{margin:.2em 0 .3em}
+
+
 /* on wider screens switch to a two-column layout (image left, text right) */
 @media (min-width:901px){
   .hero{
@@ -106,11 +110,23 @@ a:hover{text-decoration:underline}
   .hero{
     flex-direction:column;
     grid-template-columns:1fr;
+    margin:24px auto;
+    padding:0 18px;    
   }
   .hero-img{
     height:auto; /* 38vh */
-    max-height:25vh;
+    max-height:30vh;
   } 
+
+  .hero-text{
+    width:100%;
+    font-size: 15px;      
+  }
+
+  .hours-locate{font-size: 14px;}
+  .hours-locate h2{margin:.2em 0 .3em}
+
+
    /* place toggle to the right of the topbar */
   .nav-toggle{display:inline-block;order:2;margin-left:auto;margin-right:10px}
 
@@ -149,9 +165,6 @@ a:hover{text-decoration:underline}
 
 .badges{display:flex;gap:12px;list-style:none;padding:0;margin:10px 0 0}
 .badges li{font-size:.9rem;color:var(--muted);background:#141a28;border:1px solid #21283a;border-radius:999px;padding:6px 10px}
-
-.hours-locate{max-width:1100px;margin:24px auto;padding:0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.hours-locate h2{margin:.2em 0 .3em}
 
 .panels{max-width:1100px;margin:14px auto 40px;padding:0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .card{background:var(--panel);border:1px solid #1f2636;border-radius:16px;padding:16px}
