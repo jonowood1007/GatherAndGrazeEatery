@@ -21,10 +21,12 @@
       <img src="./assets/Logo.png?v=2" alt="Gather & Graze Eatery" height="35" />
       <span>Gather & Graze Eatery</span>
     </a>
-    <nav class="nav">
-      <a href="./menu.html">Menu</a>
-      <!--<a href="./services.html">Services</a>-->
-      <a href="./about.html">About</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <span class="hamburger" aria-hidden="true"><span></span></span>
+    </button>
+    <nav id="site-nav" class="nav">
+      <a href="./menu.html" class="">Menu</a>
+      <a href="./about.html" class="">About</a>
     </nav>
   </header>
 
@@ -95,15 +97,28 @@
       const el = document.getElementById('splash');
       if (el && !el.classList.contains('hide')) {
         el.classList.add('hide');
-        setTimeout(() => el.remove(), 1300);
+        setTimeout(() => el.remove(), 1100);
       }
-    }, 1500);
+    }, 1300);
   </script>
 
   <footer class="site-footer">
     <small>© <span id="year"></span> Gather & Graze Eatery • Waitoki, Auckland</small>
+    <script>
+      (function(){        
+        var btn = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('site-nav');
+        if(btn && nav){
+          btn.addEventListener('click', function(){
+            var open = nav.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open);
+          });
+        }
+      })();
+    </script>
   </footer>
 
   <script src="./js/main.js"></script>
+  
 </body>
 </html>
